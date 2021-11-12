@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useHistory, useParams } from 'react-router';
 import useAuth from '../hooks/useAuth';
 import Navigation from '../Shared/Navigation/Navigation';
+import swal from 'sweetalert';
 
 const Purchase = () => {
     const { user } = useAuth();
@@ -23,7 +24,7 @@ const Purchase = () => {
         data.name = user.displayName;
         data.status = "pending";
         data.product = product;
-        alert('Order placed SuccessFull ')
+        swal("Good job!", "You Purchased the product successfully!", "success");
         reset();
         history.push('/dashboard/myOrders');
         fetch('http://localhost:5000/orders', {

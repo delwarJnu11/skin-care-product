@@ -8,7 +8,7 @@ const Navigation = () => {
     const { user, logOut } = useAuth()
     return (
         <div>
-            <Navbar bg="primary" expand="lg">
+            <Navbar className="nav-bg" expand="lg">
                 <Container className="d-flex justify-content-center align-items-center">
                     <Navbar.Brand className="fs-2 fw-bold text-white" to="/home">SKIN CARE</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -21,7 +21,7 @@ const Navigation = () => {
                                     <NavLink className="ms-3 text-decoration-none nav-item" to="/signup">Sign Up</NavLink>
                                 </>) : (<>
                                     <NavLink className="ms-3 text-decoration-none nav-item" to="/dashboard">Dashboard</NavLink>
-                                    <NavDropdown title={<img className="user-photo" src={user.photoURL} alt="user" />} id="basic-nav-dropdown">
+                                    <NavDropdown title={<img className="user-photo" src={user.photoURL || user.displayName} alt="user" />} id="basic-nav-dropdown">
                                         <NavDropdown.Item to="">{user.displayName}</NavDropdown.Item>
                                         <NavDropdown.Item to=""><Button variant="success" onClick={logOut}>log Out</Button> </NavDropdown.Item>
                                     </NavDropdown>

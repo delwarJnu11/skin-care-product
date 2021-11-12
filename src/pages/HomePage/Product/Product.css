@@ -1,5 +1,32 @@
-.card-image{
-    width: 350px;
-    height: 400px;
+.product-title{
+    font-size: 28px;
+    font-family: Roboto;
+    color: rgba(15, 19, 27, 0.733);
+    margin-bottom: 10px;
+}
+.product-desc{
+    text-align: justify;
+    font-size: 17px;
+    font-family:  Roboto;
+    color: rgb(53, 52, 52);
+}
+.product-price{
+    font-size: 22px;
+    font-family: Roboto;
+    color: rgb(233, 121, 47);
+}
+.card-image img{
+    height: 300px;
     overflow: hidden;
+}
+.buy-now-button{
+    background-color: #1c385e;
+    border: none;
+}
+.buy-now-button:hover{
+    background-color: #152d4d;
+}
+.card-footer{
+    background-color: transparent;
+    border-top: none;
 }

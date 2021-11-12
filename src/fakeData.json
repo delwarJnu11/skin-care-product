@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Makeup",
+        "image": "https://dalia.qodeinteractive.com/wp-content/uploads/2018/05/shop-single-img-1.jpg",
+        "price": 35,
+        "description": "The makeup-as-skin-care trend generally incorporates ingredients you might think you’d find only in a high-tech serum. “I’ve noticed a lot of products with extra boosts of moisture thanks to hyaluronic acid,” says Gabrielle Pascua, a Los Angeles–based makeup artist and skin-care therapist."
+    },
+    {
+        "title": "Night Cream",
+        "image": "https://dalia.qodeinteractive.com/wp-content/uploads/2018/06/shop-single-img-2.jpg",
+        "price": 55,
+        "description": "Night cream with skin whitening properties can enhance your complexion, add brightness, make you fairer and repair your skin while you sleep. Thus, your skin needs special care during the night time. It is a known fact that the skin repairs itself at night."
+    },
+    {
+        "title": "Eye Shadow",
+        "image": "https://dalia.qodeinteractive.com/wp-content/uploads/2018/06/shop-single-img-3-600x739.jpg",
+        "price": 20,
+        "description": "You might think yellow eyeshadow is hideous, or that red eyeshadow makes you look like you’re coming down with some sort of wasting disease, but there’s a reason they were included in your palette.The colors you always skip over in favor of a neutral beige or metallic bronze are some of the most flattering shades out there and have the ability to completely refresh your look."
+    },
+    {
+        "title": "Olive Soap",
+        "image": "https://dalia.qodeinteractive.com/wp-content/uploads/2018/06/shop-single-img-5.jpg",
+        "price": 25,
+        "description": "Olive Oil Soap has anti-inflammatory effects and is non-irritating to the skin. It helps to gently clean even the most sensitive skin including skin abrasions, rashes and even sunburns. Olive Oil Soap is known to provide relief to skin conditions like eczema and psoriasis."
+    },
+    {
+        "title": "Cactus Oil",
+        "image": "https://dalia.qodeinteractive.com/wp-content/uploads/2018/06/shop-single-img-10-600x739.jpg",
+        "price": 30,
+        "description": "Olive oil is rich in vitamins and antioxidants, and has been linked to improved skin moisturization, anti-aging effects ,and relief from sun damage.Olive oil can be used on the skin on its own or as part of skincare products such as facial cleansers or lotions."
+    },
+    {
+        "title": "Olive Oil",
+        "image": "https://dalia.qodeinteractive.com/wp-content/uploads/2018/06/shop-single-img-7.jpg",
+        "price": 25,
+        "description": ""
+    },
+    {
+        "title": "Perfume",
+        "image": "https://dalia.qodeinteractive.com/wp-content/uploads/2018/06/shop-single-img-9.jpg",
+        "price": 20,
+        "description": "Perfume is a mixture of fragrant essential oils or aroma compounds (fragrances), fixatives and solvents, usually in liquid form, used to give the human body."
+    },
+    {
+        "title": "Day Cream",
+        "image": "https://dalia.qodeinteractive.com/wp-content/uploads/2018/06/shop-single-img-11.jpg",
+        "price": 25,
+        "description": "Boost your face glow and hydrate your skin with Olay day creams. The added vitamins, anti-ageing formula and SPF protect and help your skin look healthier."
+    },
+    {
+        "title": "Organic Oil",
+        "image": "https://dalia.qodeinteractive.com/wp-content/uploads/2018/06/shop-single-img-12.jpg",
+        "price": 25,
+        "description": "Natural oils, such as coconut oil, shea butter oil, and olive oil, have been used for skin care and hair care for centuries. Generation after generation have touted them for various moisturizing, protective, and antibacterial qualities."
+    },
+    {
+        "title": "Primer",
+        "image": "https://dalia.qodeinteractive.com/wp-content/uploads/2018/06/shop-single-img-4-600x739.jpg",
+        "price": 15,
+        "description": "A cosmetic primer is a cream applied before another cosmetic to improve coverage and lengthen the amount of time the cosmetic lasts on the face.There are different kinds of cosmetic primers such as foundation primer, eyelid primer, lip primer, and mascara primer."
+    }
+]

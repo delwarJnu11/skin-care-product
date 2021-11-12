@@ -46,7 +46,7 @@ const Review = () => {
                         </Row>
                         <Row>
                             <Col>
-                                <input placeholder="Review Number max-5" className="w-100 form-control mb-3" type="number" {...register("review", { required: true })} />
+                                <input placeholder="Review Number max-5" className="w-100 form-control mb-3" type="text" {...register("review", { required: true })} />
                             </Col>
                         </Row>
                         <Row>

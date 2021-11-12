@@ -7,19 +7,19 @@ const Product = ({ product }) => {
     const { title, image, description, price, _id } = product;
     return (
         <Col>
-            <Card className="h-100">
+            <Card className="h-100 text-center">
                 <div className="card-image">
                     <img src={image} alt="" className="img-fluid" />
                 </div>
                 <Card.Body>
-                    <Card.Title>{title}</Card.Title>
-                    <Card.Text>{description.slice(0, 225)}</Card.Text>
-                    <h5>Price: ${price}</h5>
+                    <Card.Title className="product-title">{title}</Card.Title>
+                    <Card.Text className="product-desc">{description.slice(0, 225)}</Card.Text>
+                    <h5 className="product-price">Price: ${price}</h5>
                 </Card.Body>
-                <Card.Footer>
+                <Card.Footer className="card-footer">
 
                     <Link to={`purchase/${_id}`}>
-                        <Button className="w-100" variant="success">Buy Now</Button>
+                        <Button className="w-100 buy-now-button" variant="success">Buy Now</Button>
                     </Link>
                 </Card.Footer>
 
