@@ -6,6 +6,7 @@ import './Navigation.css';
 
 const Navigation = () => {
     const { user, logOut } = useAuth()
+    console.log(user)
     return (
         <div>
             <Navbar className="nav-bg" expand="lg">
@@ -21,7 +22,7 @@ const Navigation = () => {
                                     <NavLink className="ms-3 text-decoration-none nav-item" to="/signup">Sign Up</NavLink>
                                 </>) : (<>
                                     <NavLink className="ms-3 text-decoration-none nav-item" to="/dashboard">Dashboard</NavLink>
-                                    <NavDropdown title={<img className="user-photo" src={user.photoURL || user.displayName} alt="user" />} id="basic-nav-dropdown">
+                                    <NavDropdown title={<img className="user-photo" src={user.photoURL} alt="user" />} id="basic-nav-dropdown">
                                         <NavDropdown.Item to="">{user.displayName}</NavDropdown.Item>
                                         <NavDropdown.Item to=""><Button variant="success" onClick={logOut}>log Out</Button> </NavDropdown.Item>
                                     </NavDropdown>

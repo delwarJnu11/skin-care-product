@@ -8,7 +8,7 @@ const Review = () => {
 
 
         if (data.review <= 5 && data.review >= 0) {
-            fetch('http://localhost:5000/review', {
+            fetch('https://aqueous-headland-20812.herokuapp.com/review', {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"

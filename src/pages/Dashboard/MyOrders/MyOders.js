@@ -9,7 +9,7 @@ const MyOders = () => {
     const [orders, setOrders] = useState([]);
     const { user } = useAuth();
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://aqueous-headland-20812.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
 
@@ -33,7 +33,7 @@ const MyOders = () => {
                     swal("Poof! Your product has been deleted!", {
                         icon: "success",
                     });
-                    fetch(`http://localhost:5000/orders/${id}`, {
+                    fetch(`https://aqueous-headland-20812.herokuapp.com/orders/${id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())

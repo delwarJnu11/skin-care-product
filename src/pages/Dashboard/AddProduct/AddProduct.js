@@ -7,7 +7,7 @@ const AddProduct = () => {
     const onSubmit = data => {
         alert('Product Added Successfully Done!!!')
         reset();
-        fetch('http://localhost:5000/products', {
+        fetch('https://aqueous-headland-20812.herokuapp.com/products', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

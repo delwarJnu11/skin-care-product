@@ -5,11 +5,15 @@ import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import login from '../../../images/login.png';
 import Navigation from '../../Shared/Navigation/Navigation';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Login.css';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 
 const Login = () => {
     const [loginData, setLoginData] = useState();
-    const { loginUser, resetPassword } = useAuth();
+    const { loginUser, signInUsingGoogle, resetPassword } = useAuth();
 
     const location = useLocation();
     const history = useHistory();
@@ -26,6 +30,11 @@ const Login = () => {
     const handleEmailSignIn = e => {
         loginUser(loginData.email, loginData.password, location, history)
         e.preventDefault();
+    }
+
+    //handle Google Sign in
+    const handleGoogleSignIn = () => {
+        signInUsingGoogle(location, history);
     }
 
     //handle reset pass
@@ -85,7 +94,7 @@ const Login = () => {
                             </Row>
 
                             <div className="d-flex justify-content-between">
-                                <Button type="submit" variant="success" className="mt-2 w-50">
+                                <Button type="submit" className="mt-2 w-50 login-button">
                                     Login
                                 </Button>
                                 <Button type="reset" variant="danger" onClick={handleResetPassword} className="mt-2 ms-2 w-50">
@@ -93,6 +102,14 @@ const Login = () => {
                                 </Button>
                             </div>
                         </Form>
+                        <NavLink
+                            style={{ textDecoration: 'none' }}
+                            to="/signup">
+                            <h6 className="my-3 text-center"> New User? Please Register</h6>
+                        </NavLink>
+                        <div className="text-center">
+                            <Button onClick={handleGoogleSignIn} className="login-button"> <FontAwesomeIcon icon={faGoogle} /> Continue With Google</Button>
+                        </div>
                     </Col>
                     <Col sm={12} md={7}>
                         <div>

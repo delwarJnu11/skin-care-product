@@ -7,7 +7,7 @@ import swal from 'sweetalert';
 const ManageAllOrders = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://aqueous-headland-20812.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [orders]);
@@ -26,7 +26,7 @@ const ManageAllOrders = () => {
                     swal("Poof! Your product has been deleted!", {
                         icon: "success",
                     });
-                    fetch(`http://localhost:5000/orders/${id}`, {
+                    fetch(`https://aqueous-headland-20812.herokuapp.com/orders/${id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())
@@ -50,7 +50,7 @@ const ManageAllOrders = () => {
 
         updatedOrder.status = "Shipped";
 
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://aqueous-headland-20812.herokuapp.com/orders/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

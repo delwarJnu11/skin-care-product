@@ -1,8 +1,9 @@
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, updateProfile, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, sendPasswordResetEmail, updateProfile, onAuthStateChanged, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../LoginPage/Firebase/firebase.init";
 
 initializeAuthentication();
+const googleProvider = new GoogleAuthProvider();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
@@ -52,10 +53,28 @@ const useFirebase = () => {
                 setIsLoading(false);
             });
     }
+    //Sign in using google
+    const signInUsingGoogle = (location, history) => {
+        setIsLoading(true);
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                const user = result.user;
+                saveUser(user.email, user.displayName, 'PUT');
+                setError('');
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
+            })
+            .catch((error) => {
+                setError(error.message);
+            })
+            .finally(() => {
+                setIsLoading(false)
+            });
+    }
     //save user
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://aqueous-headland-20812.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -104,12 +123,12 @@ const useFirebase = () => {
 
     //Set Admin
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://aqueous-headland-20812.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
 
-    return { user, isLoading, error, admin, registerNewUser, loginUser, resetPassword, logOut }
+    return { user, isLoading, error, admin, registerNewUser, loginUser, signInUsingGoogle, resetPassword, logOut }
 
 }
 export default useFirebase;

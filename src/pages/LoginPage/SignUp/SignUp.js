@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { Button, Col, Container, Form, FormControl, InputGroup, Row } from 'react-bootstrap';
 import { FaEnvelope, FaLink, FaLock, FaUser } from 'react-icons/fa';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import Navigation from '../../Shared/Navigation/Navigation';
 import registerImage from '../../../images/register.png';
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 
 const SignUp = () => {
     const [register, setRegister] = useState();
     const history = useHistory();
-    const { registerNewUser } = useAuth();
+    const location = useLocation();
+    const { registerNewUser, signInUsingGoogle } = useAuth();
 
     const handleOnBlur = e => {
         const field = e.target.name;
@@ -20,7 +24,11 @@ const SignUp = () => {
         setRegister(newRegister);
     };
 
-    console.log(register)
+    //handle Google Sign in
+    const handleGoogleSignIn = () => {
+        signInUsingGoogle(location, history);
+    }
+
 
     //handle Register
     const handleRegister = e => {
@@ -123,10 +131,18 @@ const SignUp = () => {
                             </Row>
 
 
-                            <Button type="submit" variant="success" className="mt-2 w-100">
+                            <Button type="submit" className="mt-2 w-100 login-button">
                                 Sign Up
                             </Button>
                         </Form>
+                        <NavLink
+                            style={{ textDecoration: 'none' }}
+                            to="/signup">
+                            <h6 className="my-3 text-center"> New User? Please Register</h6>
+                        </NavLink>
+                        <div className="text-center">
+                            <Button onClick={handleGoogleSignIn} className="login-button"> <FontAwesomeIcon icon={faGoogle} /> Continue With Google</Button>
+                        </div>
                     </Col>
                 </Row>
             </Container>

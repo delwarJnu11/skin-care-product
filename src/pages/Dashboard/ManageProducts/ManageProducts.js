@@ -22,7 +22,7 @@ const ManageProducts = () => {
                     swal("Poof! Your product has been deleted!", {
                         icon: "success",
                     });
-                    fetch(`http://localhost:5000/products/${id}`, {
+                    fetch(`https://aqueous-headland-20812.herokuapp.com/products/${id}`, {
                         method: "DELETE",
                         'content-type': "application/json",
                     })
