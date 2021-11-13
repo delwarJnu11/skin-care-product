@@ -16,7 +16,7 @@ const MyOders = () => {
                 const filterByUser = data.filter(order => order.email === user.email);
                 setOrders(filterByUser)
             });
-    }, [user.email]);
+    }, [orders, user.email]);
 
     //handle delete product
     const handleDelete = id => {
