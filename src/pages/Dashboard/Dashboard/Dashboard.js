@@ -22,13 +22,15 @@ import Pay from '../Pay/Pay';
 import useAuth from '../../hooks/useAuth';
 import './Dashboard.css';
 import AdminRoute from '../../LoginPage/AdminRoute/AdminRoute';
+import { FaHome } from 'react-icons/fa';
+import { MdBookmarkBorder, MdPayment, MdReviews, MdPostAdd, MdManageAccounts, MdProductionQuantityLimits, MdAdminPanelSettings, MdOutlineLogout } from 'react-icons/md';
 
 
 const drawerWidth = 240;
 
 
 const Dashboard = (props) => {
-    const { admin, logOut } = useAuth();
+    const { user, admin, logOut } = useAuth();
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
@@ -48,57 +50,52 @@ const Dashboard = (props) => {
             <List>
                 <ListItem>
                     <NavLink className="text-decoration-none" to='/'>
-                        <Button style={{ textAlign: "center", color: "white" }} color="inherit">Back Home</Button>
-                    </NavLink>
-                </ListItem>
-                <ListItem>
-                    <NavLink className="text-decoration-none" to={`${url}`}>
-                        <Button style={{ textAlign: "center", color: "white" }} color="inherit">Dashboard Home</Button>
+                        <FaHome style={{ color: "white", fontSize: "25px" }} />  <Button style={{ textAlign: "center", color: "white" }} color="inherit">Back Home</Button>
                     </NavLink>
                 </ListItem>
                 {!admin ? <>
                     <ListItem>
                         <NavLink className="text-decoration-none" to={`${url}/myOrders`}>
-                            <Button style={{ textAlign: "center", color: "white" }} color="inherit">My Orders</Button>
+                            <MdBookmarkBorder style={{ color: "white", fontSize: "25px" }} />  <Button style={{ textAlign: "center", color: "white" }} color="inherit">My Orders</Button>
                         </NavLink>
                     </ListItem>
                     <ListItem>
                         <NavLink className="text-decoration-none" to={`${url}/payment`}>
-                            <Button style={{ textAlign: "center", color: "white" }} color="inherit">Payment</Button>
+                            <MdPayment style={{ color: "white", fontSize: "25px" }} />   <Button style={{ textAlign: "center", color: "white" }} color="inherit">Payment</Button>
                         </NavLink>
                     </ListItem>
                     <ListItem>
                         <NavLink className="text-decoration-none" to={`${url}/review`}>
-                            <Button style={{ textAlign: "center", color: "white" }} color="inherit">Review</Button>
+                            <MdReviews style={{ color: "white", fontSize: "25px" }} /> <Button style={{ textAlign: "center", color: "white" }} color="inherit">Review</Button>
                         </NavLink>
                     </ListItem>
                 </> :
                     <>
                         <ListItem>
                             <NavLink className="text-decoration-none" to={`${url}/addProduct`}>
-                                <Button style={{ textAlign: "center", color: "white" }} color="inherit">Add a Product</Button>
+                                <MdPostAdd style={{ color: "white", fontSize: "25px" }} />  <Button style={{ textAlign: "center", color: "white" }} color="inherit">Add a Product</Button>
                             </NavLink>
                         </ListItem>
                         <ListItem>
                             <NavLink className="text-decoration-none" to={`${url}/makeAdmin`}>
-                                <Button style={{ textAlign: "center", color: "white" }} color="inherit">Make Admin</Button>
+                                <MdAdminPanelSettings style={{ color: "white", fontSize: "25px" }} />  <Button style={{ textAlign: "center", color: "white" }} color="inherit">Make Admin</Button>
                             </NavLink>
                         </ListItem>
                         <ListItem>
                             <NavLink className="text-decoration-none" to={`${url}/manageOrders`}>
-                                <Button style={{ textAlign: "center", color: "white" }} color="inherit">Manage All Orders</Button>
+                                <MdManageAccounts style={{ color: "white", fontSize: "25px" }} />  <Button style={{ textAlign: "center", color: "white" }} color="inherit">Manage All Orders</Button>
                             </NavLink>
                         </ListItem>
                         <ListItem>
                             <NavLink className="text-decoration-none" to={`${url}/manageProducts`}>
-                                <Button style={{ textAlign: "center", color: "white" }} color="inherit">Manage Products</Button>
+                                <MdProductionQuantityLimits style={{ color: "white", fontSize: "25px" }} />   <Button style={{ textAlign: "center", color: "white" }} color="inherit">Manage Products</Button>
                             </NavLink>
                         </ListItem>
                     </>
                 }
                 <ListItem>
                     <NavLink className="text-decoration-none" to='/'>
-                        <Button style={{ textAlign: "center", color: "white" }} onClick={logOut} variant="contained" color="error">Log Out</Button>
+                        <Button style={{ textAlign: "center", color: "white" }} onClick={logOut} variant="contained" color="error">Log Out <MdOutlineLogout style={{ color: "white", fontSize: "20px", marginLeft: "5px" }} /></Button>
                     </NavLink>
                 </ListItem>
             </List>
@@ -131,7 +128,7 @@ const Dashboard = (props) => {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        Dashboard
+                        WELCOME TO DASHBOARD Mr./Mrs, {user.displayName.toUpperCase()}
                     </Typography>
                 </Toolbar>
             </AppBar>

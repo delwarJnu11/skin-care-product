@@ -41,6 +41,7 @@ const Reviews = () => {
                                     fullSymbol={<FontAwesomeIcon icon={faStar} />}
                                 /></p>
                                 <h4 className="name">{review.name}</h4>
+                                <p className="review-text text-muted text-center">{review.email}</p>
                                 <p className="review-text">{review.description}</p>
 
                             </div>

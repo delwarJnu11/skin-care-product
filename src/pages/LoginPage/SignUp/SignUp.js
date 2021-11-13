@@ -14,7 +14,7 @@ const SignUp = () => {
     const [register, setRegister] = useState();
     const history = useHistory();
     const location = useLocation();
-    const { registerNewUser, signInUsingGoogle } = useAuth();
+    const { registerNewUser, signInUsingGoogle, error } = useAuth();
 
     const handleOnBlur = e => {
         const field = e.target.name;
@@ -39,6 +39,7 @@ const SignUp = () => {
         <>
             <Navigation></Navigation>
             <Container>
+                <p>{error}</p>
                 <Row className="d-flex align-items-center">
                     <Col sm={12} md={7}>
                         <div>

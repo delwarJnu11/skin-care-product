@@ -1,11 +1,12 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import useAuth from '../../hooks/useAuth';
 
 const Review = () => {
+    const { user } = useAuth();
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-
 
         if (data.review <= 5 && data.review >= 0) {
             fetch('https://aqueous-headland-20812.herokuapp.com/review', {
@@ -36,7 +37,12 @@ const Review = () => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Row>
                             <Col>
-                                <input placeholder="Customer Name" className="w-100 form-control mb-3" type="text" {...register("name")} />
+                                <input placeholder="Customer Name" className="w-100 form-control mb-3" defaultValue={user.displayName} type="text" {...register("name")} />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <input placeholder="Customer Email" className="w-100 form-control mb-3" defaultValue={user.email} type="text" {...register("email")} />
                             </Col>
                         </Row>
                         <Row>

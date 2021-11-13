@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Product.css';
+import { BsCart4 } from 'react-icons/bs'
 
 const Product = ({ product }) => {
     const { title, image, description, price, _id } = product;
@@ -19,7 +20,7 @@ const Product = ({ product }) => {
                 <Card.Footer className="card-footer">
 
                     <Link to={`purchase/${_id}`}>
-                        <Button className="w-100 buy-now-button" variant="success">Buy Now</Button>
+                        <Button className="w-100 buy-now-button"><BsCart4 style={{ fontSize: "20px" }} /> Buy Now</Button>
                     </Link>
                 </Card.Footer>
 

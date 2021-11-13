@@ -6,7 +6,7 @@ const Slider = () => {
         <Carousel>
             <Carousel.Item>
                 <img
-                    style={{ height: "100vh" }}
+                    style={{ height: "540px" }}
                     className="d-block w-100"
                     src="https://i.ibb.co/ZLxF28c/banner-1.png"
                     alt="First slide"
@@ -14,7 +14,7 @@ const Slider = () => {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    style={{ height: "100vh" }}
+                    style={{ height: "540px" }}
                     className="d-block w-100"
                     src="https://i.ibb.co/CJh7qh3/banner-2.png"
                     alt="Second slide"
@@ -22,7 +22,7 @@ const Slider = () => {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    style={{ height: "100vh" }}
+                    style={{ height: "540px" }}
                     className="d-block w-100"
                     src="https://i.ibb.co/HYY0FGL/banner-3.png"
                     alt="Third slide"
