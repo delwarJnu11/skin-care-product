@@ -5,6 +5,8 @@ import { useHistory, useParams } from 'react-router';
 import useAuth from '../hooks/useAuth';
 import Navigation from '../Shared/Navigation/Navigation';
 import swal from 'sweetalert';
+import Footer from '../Shared/Footer/Footer';
+import './Purchase.css';
 
 const Purchase = () => {
     const { user } = useAuth();
@@ -46,8 +48,8 @@ const Purchase = () => {
                         </div>
                     </Col>
                     <Col md={6}>
-                        <h1>{product?.title}</h1>
-                        <p>{product?.description}</p>
+                        <h1 className="purchase-title">{product?.title}</h1>
+                        <p className="purchase-desc">{product?.description}</p>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <Row>
                                 <Col>
@@ -69,13 +71,14 @@ const Purchase = () => {
                                     <input required placeholder="Phone" className="w-100 form-control mb-3" {...register("phone", { required: true })} />
                                 </Col>
                             </Row>
-                            <Button variant="success" type="submit">
+                            <Button className="buy-now-button" type="submit">
                                 Place Order
                             </Button>
                         </form>
                     </Col>
                 </Row>
             </Container>
+            <Footer></Footer>
         </>
     );
 };

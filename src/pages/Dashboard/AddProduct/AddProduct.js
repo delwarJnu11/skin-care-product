@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import swal from 'sweetalert';
 import './AddProduct.css';
 
 const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        alert('Product Added Successfully Done!!!')
+        swal("Good job!", "Your product added successfully done!", "success");
         reset();
         fetch('https://aqueous-headland-20812.herokuapp.com/products', {
             method: "POST",

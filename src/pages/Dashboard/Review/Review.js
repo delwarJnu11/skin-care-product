@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import swal from 'sweetalert';
 import useAuth from '../../hooks/useAuth';
 
 const Review = () => {
@@ -18,7 +19,7 @@ const Review = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    alert('Review Added Successfully Done!!!')
+                    swal("Good job!", "Review Added Successfully Done!", "success");
                     reset();
                 })
         } else {

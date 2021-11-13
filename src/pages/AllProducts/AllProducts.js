@@ -3,6 +3,7 @@ import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import Product from '../HomePage/Product/Product';
 import useAuth from '../hooks/useAuth';
 import useProducts from '../hooks/useProducts';
+import Footer from '../Shared/Footer/Footer';
 import Navigation from '../Shared/Navigation/Navigation';
 
 const AllProducts = () => {
@@ -34,6 +35,7 @@ const AllProducts = () => {
                     }
                 </Row>
             </Container>
+            <Footer></Footer>
         </>
     );
 };

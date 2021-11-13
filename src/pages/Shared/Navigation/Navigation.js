@@ -5,12 +5,11 @@ import useAuth from '../../hooks/useAuth';
 import './Navigation.css';
 
 const Navigation = () => {
-    const { user, logOut } = useAuth()
-    console.log(user)
+    const { user, logOut } = useAuth();
     return (
         <div>
             <Navbar className="nav-bg" expand="lg">
-                <Container className="d-flex justify-content-center align-items-center">
+                <Container>
                     <Navbar.Brand className="fs-2 fw-bold text-white" to="/home">SKIN CARE</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">

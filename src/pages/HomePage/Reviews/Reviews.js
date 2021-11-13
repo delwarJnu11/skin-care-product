@@ -27,7 +27,7 @@ const Reviews = () => {
             </Row>
             <Row xs={1} md={3} className="g-4 mt-4">
                 {
-                    reviews.map(review => <Col>
+                    reviews.map(review => <Col key={review._id}>
                         <div className="text-center p-3 border h-100">
                             <div>
                                 <div className="review-image">

@@ -1,0 +1,11 @@
+.purchase-title{
+    font-size: 28px;
+    font-family: roboto;
+    color:  #ec8d4d;
+}
+.purchase-desc{
+    text-align: justify;
+    font-size: 17px;
+    font-family:  Roboto;
+    color: rgb(53, 52, 52);
+}

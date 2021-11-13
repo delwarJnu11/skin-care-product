@@ -14,10 +14,9 @@ const MyOders = () => {
             .then(data => {
 
                 const filterByUser = data.filter(order => order.email === user.email);
-                console.log(filterByUser)
                 setOrders(filterByUser)
             });
-    }, [orders, user.email]);
+    }, [user.email]);
 
     //handle delete product
     const handleDelete = id => {
@@ -45,7 +44,7 @@ const MyOders = () => {
                             }
                         })
                 } else {
-                    swal("Your Product file is safe!");
+                    swal("Your Product is safe!");
                 }
             });
 
@@ -68,7 +67,7 @@ const MyOders = () => {
                         </thead>
                         <tbody>
                             {
-                                orders.map(order => <tr>
+                                orders.map(order => <tr key={order._id}>
                                     <td>{order._id}</td>
                                     <td>{order.product.title}</td>
                                     <td>{order.name}</td>
