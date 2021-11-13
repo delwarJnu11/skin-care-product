@@ -45,10 +45,10 @@ const ManageProducts = () => {
 
     return (
         <Container>
+            <h1 className="dashboard-title text-center">Total Products {products.length}</h1>
             <Row>
-                <h1 className="dashboard-title text-center">Total Products {products.length}</h1>
-                <Col md={12}>
-                    <Table striped bordered hover>
+                <Col xs={12} sm={12} md={12}>
+                    <Table striped bordered hover responsive="sm">
                         <thead>
                             <tr>
                                 <th>Product Id</th>

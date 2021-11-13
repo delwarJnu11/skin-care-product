@@ -54,8 +54,8 @@ const MyOders = () => {
     return (
         <Container>
             <Row>
-                <Col xs={12} sm={12} md={12} className="table-responsive">
-                    <Table striped bordered hover>
+                <Col xs={12} sm={12} md={12}>
+                    <Table striped bordered hover responsive="sm">
                         <thead>
                             <tr>
                                 <th>Order Id</th>

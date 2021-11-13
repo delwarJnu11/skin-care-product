@@ -7,6 +7,7 @@ import Home from "./pages/HomePage/Home/Home";
 import Login from './pages/LoginPage/Login/Login';
 import PrivateRoute from './pages/LoginPage/PrivateRoute/PrivateRoute';
 import SignUp from './pages/LoginPage/SignUp/SignUp';
+import NotFound from './pages/NotFound/NotFound';
 import Purchase from './pages/Purchase/Purchase';
 
 
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <SignUp></SignUp>
+          </Route>
+          <Route path="*">
+            <NotFound></NotFound>
           </Route>
         </Switch>
       </Router>

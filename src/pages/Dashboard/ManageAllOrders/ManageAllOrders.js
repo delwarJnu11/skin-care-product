@@ -70,8 +70,11 @@ const ManageAllOrders = () => {
         <Container>
             <Row>
                 <h1 className="dashboard-title text-center">Total Orders {orders.length}</h1>
-                <Col md={12}>
-                    <Table striped bordered hover>
+            </Row>
+            <Row>
+
+                <Col xs={12} sm={12} md={12}>
+                    <Table striped bordered hover responsive="sm">
                         <thead>
                             <tr>
                                 <th>Order Id</th>

@@ -30,7 +30,7 @@ const drawerWidth = 240;
 
 
 const Dashboard = (props) => {
-    const { user, admin, logOut } = useAuth();
+    const { admin, logOut } = useAuth();
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
@@ -128,7 +128,7 @@ const Dashboard = (props) => {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        WELCOME TO DASHBOARD Mr./Mrs, {user.displayName.toUpperCase()}
+                        Dashboard   {/* WELCOME TO DASHBOARD Mr./Mrs, {user.displayName.toUpperCase()} */}
                     </Typography>
                 </Toolbar>
             </AppBar>
