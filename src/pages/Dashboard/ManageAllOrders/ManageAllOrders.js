@@ -69,6 +69,7 @@ const ManageAllOrders = () => {
     return (
         <Container>
             <Row>
+                <h1 className="dashboard-title text-center">Total Orders {orders.length}</h1>
                 <Col md={12}>
                     <Table striped bordered hover>
                         <thead>

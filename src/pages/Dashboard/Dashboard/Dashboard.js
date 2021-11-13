@@ -40,7 +40,7 @@ const Dashboard = (props) => {
         <div style={{ backgroundColor: "#1c385e", height: "100vh" }}>
             <Toolbar>
                 <Typography style={{ color: "white" }} variant="h4">
-                    Skin care
+                    SKIN CARE
                 </Typography>
             </Toolbar>
 

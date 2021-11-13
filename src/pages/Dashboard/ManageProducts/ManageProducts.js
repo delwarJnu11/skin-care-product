@@ -46,6 +46,7 @@ const ManageProducts = () => {
     return (
         <Container>
             <Row>
+                <h1 className="dashboard-title text-center">Total Products {products.length}</h1>
                 <Col md={12}>
                     <Table striped bordered hover>
                         <thead>
@@ -54,7 +55,6 @@ const ManageProducts = () => {
                                 <th>Product Image</th>
                                 <th>Product Name</th>
                                 <th>Price</th>
-                                <th>status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -65,7 +65,6 @@ const ManageProducts = () => {
                                     <td> <img width="50px" height="50px" src={product.image} alt="" /> </td>
                                     <td>{product?.title}</td>
                                     <td>${product?.price}</td>
-                                    <td>{product?.status}</td>
                                     <td>
                                         <Button title="Delete" variant="danger" onClick={() => handleDelete(product._id)}>
                                             <FontAwesomeIcon icon={faTrashAlt} />

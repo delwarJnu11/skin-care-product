@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import './AddProduct.css';
 
 const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -18,9 +19,9 @@ const AddProduct = () => {
     return (
         <Container className="my-5">
             <Row>
-
-                <Col>
-                    <h1>Add A Product</h1>
+                <Col md={3}></Col>
+                <Col md={6}>
+                    <h1 className="dashboard-title">Add A Product</h1>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Row>
                             <Col>
@@ -42,11 +43,12 @@ const AddProduct = () => {
                                 <input required placeholder="Image Url" className="w-100 form-control mb-3" {...register("image", { required: true })} />
                             </Col>
                         </Row>
-                        <Button variant="success" type="submit">
+                        <Button className="dashboard-button" type="submit">
                             Add Product
                         </Button>
                     </form>
                 </Col>
+                <Col md={3}></Col>
             </Row>
         </Container>
 

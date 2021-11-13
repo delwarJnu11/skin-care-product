@@ -33,6 +33,7 @@ const MakeAdmin = () => {
             <Row>
                 <Col md={4}></Col>
                 <Col md={4}>
+                    <h1 className="dashboard-title">Make a User Admin</h1>
                     <form onSubmit={handleAdminSubmit}>
                         <Row>
                             <Col>
@@ -43,7 +44,7 @@ const MakeAdmin = () => {
                                 />
                             </Col>
                         </Row>
-                        <Button variant="success" type="submit">
+                        <Button className="dashboard-button" type="submit">
                             Make an Admin
                         </Button>
                     </form>

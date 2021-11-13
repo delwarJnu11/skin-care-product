@@ -30,9 +30,9 @@ const Review = () => {
     return (
         <Container className="my-5">
             <Row>
-
-                <Col>
-                    <h1>Add A Review</h1>
+                <Col md={3}></Col>
+                <Col md={6}>
+                    <h1 className="dashboard-title">Add A Review</h1>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Row>
                             <Col>
@@ -54,11 +54,12 @@ const Review = () => {
                                 <input required placeholder="customer Image URL" className="w-100 form-control mb-3" type="text" {...register("image", { required: true })} />
                             </Col>
                         </Row>
-                        <Button variant="success" type="submit">
+                        <Button className="dashboard-button" type="submit">
                             Add A Review
                         </Button>
                     </form>
                 </Col>
+                <Col md={3}></Col>
             </Row>
         </Container>
 

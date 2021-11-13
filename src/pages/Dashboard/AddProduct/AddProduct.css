@@ -1,0 +1,13 @@
+.dashboard-title{
+    font-size: 36px;
+    font-family: roboto;
+    color: rgb(25, 70, 107);
+    margin-bottom: 1em;
+}
+.dashboard-button{
+    background-color: rgb(25, 70, 107);
+    border: none;
+}
+.dashboard-button:hover{
+    background-color: rgb(16, 48, 75);
+}

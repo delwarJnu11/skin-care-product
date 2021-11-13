@@ -25,9 +25,11 @@ const useFirebase = () => {
                 updateProfile(auth.currentUser, {
                     displayName: name,
                     photoURL: photo
-                }).then(() => {
-                }).catch((error) => {
-                });
+                })
+                    .then(() => {
+                    })
+                    .catch((error) => {
+                    });
                 history.replace('/');
             })
             .catch((error) => {
