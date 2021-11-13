@@ -7,7 +7,7 @@
     overflow: hidden;
 }
 .banner-text-area{
-    padding-top: 5.2em 0em;
+    padding: 5.2em 0;
 }
 .text-wrapper{
     margin-top: 15px;
@@ -23,7 +23,7 @@
     text-align: justify;
     font-size: 17px;
     font-family:  Roboto;
-    color: rgb(53, 52, 52);
+    color: rgb(78, 77, 77);
 }
 .discount-button{
     background-color: #d0936a;

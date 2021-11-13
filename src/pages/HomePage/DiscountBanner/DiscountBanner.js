@@ -6,8 +6,8 @@ import treeLeaf from '../../../images/leaf.png';
 
 const DiscountBanner = () => {
     return (
-        <Container fluid className="banner-bg my-5">
-            <Row className="d-flex justify-content-center align-items-center">
+        <Container fluid className="banner-bg">
+            <Row>
                 <Col sm={12} md={1}>
                 </Col>
                 <Col sm={12} md={5} className="banner-text-area">
@@ -20,7 +20,7 @@ const DiscountBanner = () => {
                         <Button className="discount-button">Learn More</Button>
                     </div>
                     <div>
-                        <img src={treeLeaf} alt="" className="img-fluid" />
+                        <img src={treeLeaf} alt="" className="img-fluid leaf" />
                     </div>
                 </Col>
                 <Col sm={12} md={6}>
