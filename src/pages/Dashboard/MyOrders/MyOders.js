@@ -54,7 +54,7 @@ const MyOders = () => {
     return (
         <Container>
             <Row>
-                <Col md={12}>
+                <Col sm={12} md={12}>
                     <Table striped bordered hover>
                         <thead>
                             <tr>
