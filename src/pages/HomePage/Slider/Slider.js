@@ -5,10 +5,13 @@ const Slider = () => {
     return (
         <Carousel>
             <Carousel.Item>
+
+
+
                 <img
                     style={{ height: "540px" }}
                     className="d-block w-100 img-fluid"
-                    src="https://i.ibb.co/ZLxF28c/banner-1.png"
+                    src="https://i.ibb.co/yQV8zSQ/cos-3.webp"
                     alt="First slide"
                 />
             </Carousel.Item>
@@ -16,7 +19,7 @@ const Slider = () => {
                 <img
                     style={{ height: "540px" }}
                     className="d-block w-100 img-fluid"
-                    src="https://i.ibb.co/CJh7qh3/banner-2.png"
+                    src="https://i.ibb.co/b5phPz5/Cosmetics-beauty-product-bottle-mockup-banner-on-gold-background-with-liquid-droplets-splash-Skin-ca.jpg"
                     alt="Second slide"
                 />
             </Carousel.Item>
@@ -24,7 +27,7 @@ const Slider = () => {
                 <img
                     style={{ height: "540px" }}
                     className="d-block w-100 img-fluid"
-                    src="https://i.ibb.co/HYY0FGL/banner-3.png"
+                    src="https://i.ibb.co/ncxDsrT/cos-1.webp"
                     alt="Third slide"
                 />
             </Carousel.Item>
