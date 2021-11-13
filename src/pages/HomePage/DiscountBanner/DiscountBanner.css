@@ -7,8 +7,7 @@
     overflow: hidden;
 }
 .banner-text-area{
-    padding-top: 5.2em;
-    padding-bottom: 5.2em;
+    padding-top: 5.2em 0em;
 }
 .text-wrapper{
     margin-top: 15px;
