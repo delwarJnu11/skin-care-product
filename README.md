@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+# Getting Started with Skin Care
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Website Link -  [https://skin-care-3633d.web.app/](https://skin-care-3633d.web.app/).
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+What began as a small collection in a neighborhood shop has evolved into a full lifestyle line of skincare, lip care, bodycare, and fragrance sold all over the Country. The sensoriality of our products—their textures and scents—sets them apart. But we are also scientifically proven to work extremely well. It’s this combination of high efficacy and amazing sensations that we’re known for, and why those who know us love us. Lev says skin care creates products people don’t know they need—and then can’t live without. Our founders still work with the brand every day to fulfill their original dream of making beauty that performs and transforms.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Key Points
+- We Provide Natural skin care Products all over the Country.It,s 100% Natural and Halal.
+- Here, A Customer can buy his/her Products through visit our website Skin care.
+- A Customer can get Products through currier Service.Because We Provide Home Delivery Service all Over the Country.
+- We Accept Digital Payment like Nagad,Bkash,Rocket and any Online Banking Payment POS is Available.
+- A Cutomer can buy a product with cash On Delivery. Cash On Delivery Is available with all Products but condition must be follwed.
