@@ -2,6 +2,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import useProducts from '../../hooks/useProducts';
 import Product from '../Product/Product';
 import './Products.css';
+import Fade from 'react-reveal/Fade';
 
 const Products = () => {
     const { products } = useProducts();
@@ -12,8 +13,12 @@ const Products = () => {
                     <Col sm={12} md={2}></Col>
                     <Col sm={12} md={8}>
                         <div className="text-center">
-                            <h3 className="featured-products">Featured Products</h3>
-                            <p className="featured-desc">Our product range includes Skin Whitening And Fairness Cream, Oxygen Oxygenating Mask, Skin Care Gel, Natural Hair Conditioner, Chocolate Coffee Face Wash</p>
+                            <Fade right cascade>
+                                <h3 className="featured-products">Featured Products</h3>
+                            </Fade>
+                            <Fade left cascade>
+                                <p className="featured-desc">Our product range includes Skin Whitening And Fairness Cream, Oxygen Oxygenating Mask, Skin Care Gel, Natural Hair Conditioner, Chocolate Coffee Face Wash</p>
+                            </Fade>
                         </div>
                     </Col>
                     <Col sm={12} md={2}></Col>

@@ -4,7 +4,9 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as emptyStar } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Rating from 'react-rating';
-import './Reviews.css'
+import './Reviews.css';
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -19,8 +21,12 @@ const Reviews = () => {
                 <Col md={2}></Col>
                 <Col md={8}>
                     <div className="text-center">
-                        <h3 className="review-title">What Our Customer Say</h3>
-                        <p className="review-desc">Our product range includes Skin Whitening And Fairness Cream, Oxygen Oxygenating Mask, Skin Care Gel, Natural Hair Conditioner, Chocolate Coffee Face Wash</p>
+                        <Fade left cascade>
+                            <h3 className="review-title">What Our Customer Say</h3>
+                        </Fade>
+                        <Fade Right cascade>
+                            <p className="review-desc">Our product range includes Skin Whitening And Fairness Cream, Oxygen Oxygenating Mask, Skin Care Gel, Natural Hair Conditioner, Chocolate Coffee Face Wash</p>
+                        </Fade>
                     </div>
                 </Col>
                 <Col md={2}></Col>
@@ -29,22 +35,24 @@ const Reviews = () => {
                 {
                     reviews.map(review => <Col key={review._id}>
                         <div className="text-center p-3 border h-100">
-                            <div>
-                                <div className="review-image">
-                                    <img src={review.image} alt="" className="img-fluid" />
-                                </div>
-                                <p className="my-2"><Rating
-                                    readonly
-                                    style={{ color: "goldenrod" }}
-                                    initialRating={review.review}
-                                    emptySymbol={<FontAwesomeIcon icon={emptyStar} />}
-                                    fullSymbol={<FontAwesomeIcon icon={faStar} />}
-                                /></p>
-                                <h4 className="name">{review.name}</h4>
-                                <p className="review-text text-muted text-center">{review.email}</p>
-                                <p className="review-text">{review.description}</p>
+                            <Zoom>
+                                <div>
+                                    <div className="review-image">
+                                        <img src={review.image} alt="" className="img-fluid" />
+                                    </div>
+                                    <p className="my-2"><Rating
+                                        readonly
+                                        style={{ color: "goldenrod" }}
+                                        initialRating={review.review}
+                                        emptySymbol={<FontAwesomeIcon icon={emptyStar} />}
+                                        fullSymbol={<FontAwesomeIcon icon={faStar} />}
+                                    /></p>
+                                    <h4 className="name">{review.name}</h4>
+                                    <p className="review-text text-muted text-center">{review.email}</p>
+                                    <p className="review-text">{review.description}</p>
 
-                            </div>
+                                </div>
+                            </Zoom>
                         </div>
                     </Col>)
                 }
