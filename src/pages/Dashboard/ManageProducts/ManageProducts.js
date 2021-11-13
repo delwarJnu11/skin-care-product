@@ -48,33 +48,35 @@ const ManageProducts = () => {
             <h1 className="dashboard-title text-center">Total Products {products.length}</h1>
             <Row>
                 <Col xs={12} sm={12} md={12}>
-                    <Table striped bordered hover responsive="sm">
-                        <thead>
-                            <tr>
-                                <th>Product Id</th>
-                                <th>Product Image</th>
-                                <th>Product Name</th>
-                                <th>Price</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                products.map(product => <tr key={product._id}>
-                                    <td>{product._id}</td>
-                                    <td> <img width="50px" height="50px" src={product.image} alt="" /> </td>
-                                    <td>{product?.title}</td>
-                                    <td>${product?.price}</td>
-                                    <td>
-                                        <Button title="Delete" variant="danger" onClick={() => handleDelete(product._id)}>
-                                            <FontAwesomeIcon icon={faTrashAlt} />
-                                        </Button>
-                                    </td>
+                    <div style={{ overflow: 'scroll' }}>
+                        <Table striped bordered hover responsive="sm">
+                            <thead>
+                                <tr>
+                                    <th>Product Image</th>
+                                    <th>Product Id</th>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    products.map(product => <tr key={product._id}>
+                                        <td>{product._id}</td>
+                                        <td> <img width="50px" height="50px" src={product.image} alt="" /> </td>
+                                        <td>{product?.title}</td>
+                                        <td>${product?.price}</td>
+                                        <td>
+                                            <Button title="Delete" variant="danger" onClick={() => handleDelete(product._id)}>
+                                                <FontAwesomeIcon icon={faTrashAlt} />
+                                            </Button>
+                                        </td>
 
-                                </tr>)
-                            }
-                        </tbody>
-                    </Table>
+                                    </tr>)
+                                }
+                            </tbody>
+                        </Table>
+                    </div>
                 </Col>
             </Row>
         </Container>

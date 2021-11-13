@@ -3,7 +3,6 @@ import { Spinner } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import Footer from '../../Shared/Footer/Footer';
 import Navigation from '../../Shared/Navigation/Navigation';
-import BrandsLogo from '../BrandsLogo/BrandsLogo';
 import DiscountBanner from '../DiscountBanner/DiscountBanner';
 import Products from '../Products/Products';
 import Reviews from '../Reviews/Reviews';
@@ -24,7 +23,6 @@ const Home = () => {
             <Products></Products>
             <DiscountBanner></DiscountBanner>
             <Reviews></Reviews>
-            <BrandsLogo></BrandsLogo>
             <Footer></Footer>
         </div>
     );

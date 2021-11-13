@@ -138,8 +138,8 @@ const SignUp = () => {
                         </Form>
                         <NavLink
                             style={{ textDecoration: 'none' }}
-                            to="/signup">
-                            <h6 className="my-3 text-center"> New User? Please Register</h6>
+                            to="/login">
+                            <h6 className="my-3 text-center"> Already Have an Account? Please Login</h6>
                         </NavLink>
                         <div className="text-center">
                             <Button onClick={handleGoogleSignIn} className="login-button"> <FontAwesomeIcon icon={faGoogle} /> Continue With Google</Button>

@@ -28,7 +28,7 @@ const DiscountBanner = () => {
                     </Fade>
                     <Zoom>
                         <div>
-                            <img src={treeLeaf} alt="" className="img-fluid leaf" />
+                            <img src={treeLeaf} alt="" className="img-fluid" />
                         </div>
                     </Zoom>
                 </Col>
