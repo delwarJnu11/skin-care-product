@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import swal from 'sweetalert';
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('');
+    //get Input value
     const handleOnBlur = e => {
         const value = e.target.value;
         setEmail(value);
     }
+    //handle admin submit
     const handleAdminSubmit = e => {
         const user = { email };
         fetch('https://aqueous-headland-20812.herokuapp.com/users', {
@@ -19,7 +22,7 @@ const MakeAdmin = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount) {
-                    alert('Admin made successfull done')
+                    swal("Good job!", "Admin Made Successfully Done!", "success");
                 }
             })
 

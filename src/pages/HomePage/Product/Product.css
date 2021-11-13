@@ -1,7 +1,7 @@
 .product-title{
     font-size: 28px;
     font-family: Roboto;
-    color: rgba(15, 19, 27, 0.733);
+    color:  #ec8d4d;
     margin-bottom: 10px;
 }
 .product-desc{
@@ -20,11 +20,11 @@
     overflow: hidden;
 }
 .buy-now-button{
-    background-color: #1c385e;
+    background-color: #d0936a;
     border: none;
 }
 .buy-now-button:hover{
-    background-color: #152d4d;
+    background-color: #975e38;
 }
 .card-footer{
     background-color: transparent;

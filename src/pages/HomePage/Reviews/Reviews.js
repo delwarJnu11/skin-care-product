@@ -40,7 +40,7 @@ const Reviews = () => {
                                     emptySymbol={<FontAwesomeIcon icon={emptyStar} />}
                                     fullSymbol={<FontAwesomeIcon icon={faStar} />}
                                 /></p>
-                                <h4 className="text-muted">{review.name}</h4>
+                                <h4 className="name">{review.name}</h4>
                                 <p className="review-text">{review.description}</p>
 
                             </div>

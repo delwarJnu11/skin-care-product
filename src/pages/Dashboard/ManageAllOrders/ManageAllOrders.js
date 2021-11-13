@@ -5,6 +5,7 @@ import { Button, Col, Container, Row, Table } from 'react-bootstrap';
 import swal from 'sweetalert';
 
 const ManageAllOrders = () => {
+
     const [orders, setOrders] = useState([]);
     useEffect(() => {
         fetch('https://aqueous-headland-20812.herokuapp.com/orders')
@@ -64,6 +65,7 @@ const ManageAllOrders = () => {
                 }
             })
     }
+
     return (
         <Container>
             <Row>

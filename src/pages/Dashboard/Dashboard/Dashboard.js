@@ -21,6 +21,7 @@ import ManageProducts from '../ManageProducts/ManageProducts';
 import Pay from '../Pay/Pay';
 import useAuth from '../../hooks/useAuth';
 import './Dashboard.css';
+import AdminRoute from '../../LoginPage/AdminRoute/AdminRoute';
 
 
 const drawerWidth = 240;
@@ -28,7 +29,6 @@ const drawerWidth = 240;
 
 const Dashboard = (props) => {
     const { admin, logOut } = useAuth();
-    console.log(admin)
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
@@ -186,18 +186,18 @@ const Dashboard = (props) => {
                     <Route path={`${path}/review`}>
                         <Review></Review>
                     </Route>
-                    <Route path={`${path}/addProduct`}>
+                    <AdminRoute path={`${path}/addProduct`}>
                         <AddProduct></AddProduct>
-                    </Route>
-                    <Route path={`${path}/makeAdmin`}>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/makeAdmin`}>
                         <MakeAdmin></MakeAdmin>
-                    </Route>
-                    <Route path={`${path}/manageOrders`}>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/manageOrders`}>
                         <ManageAllOrders></ManageAllOrders>
-                    </Route>
-                    <Route path={`${path}/manageProducts`}>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/manageProducts`}>
                         <ManageProducts></ManageProducts>
-                    </Route>
+                    </AdminRoute>
 
                 </Switch>
             </Box>

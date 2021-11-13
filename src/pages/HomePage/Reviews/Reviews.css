@@ -1,6 +1,6 @@
 .review-title{
     font-size: 36px;
-    color: #404040;
+    color:  #ec8d4d;
     font-family: Roboto;
 }
 .review-desc{
@@ -21,4 +21,7 @@
     font-size: 17px;
     font-family:  Roboto;
     color: rgb(53, 52, 52);
+}
+.name{
+    color:  #d8854e;
 }

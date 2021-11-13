@@ -1,0 +1,37 @@
+.banner-bg{
+    background-image: url(../../../images/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+.banner-text-area{
+    padding-top: 5.2em;
+    padding-bottom: 5.2em;
+}
+.text-wrapper{
+    margin-top: 15px;
+    margin-left: 50px;
+}
+.discount-title{
+    font-size: 36px;
+    font-family: Roboto;
+    font-weight: 500;
+    color: #d0936a;
+}
+.discount-desc{
+    text-align: justify;
+    font-size: 17px;
+    font-family:  Roboto;
+    color: rgb(53, 52, 52);
+}
+.discount-button{
+    background-color: #d0936a;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+}
+.discount-button:hover{
+    background-color: #975e38;
+}

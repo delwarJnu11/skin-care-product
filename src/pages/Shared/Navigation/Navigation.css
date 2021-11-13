@@ -1,9 +1,9 @@
 .nav-bg{
-   background-color: #1c385e;
+   background-color: #d0936a;
 }
 .nav-item{
     color: whitesmoke;
-font-weight: 600;
+    font-weight: 600;
 }
 .nav-item:hover{
     color: black;
