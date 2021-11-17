@@ -16,7 +16,7 @@ const Product = ({ product }) => {
                     </div>
                     <Card.Body>
                         <Card.Title className="product-title">{title}</Card.Title>
-                        <Card.Text className="product-desc">{description.slice(0, 225)}</Card.Text>
+                        <Card.Text className="product-desc">{description.slice(0, 200)}</Card.Text>
                         <h5 className="product-price">Price: ${price}</h5>
                     </Card.Body>
                     <Card.Footer className="card-footer">
