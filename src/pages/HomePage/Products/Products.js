@@ -1,11 +1,13 @@
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import useProducts from '../../hooks/useProducts';
 import Product from '../Product/Product';
 import './Products.css';
 import Fade from 'react-reveal/Fade';
+import useAuth from '../../hooks/useAuth';
 
 const Products = () => {
     const { products } = useProducts();
+    const { isLoading } = useAuth();
     return (
         <>
             <Container className="my-5">
@@ -23,11 +25,15 @@ const Products = () => {
                     </Col>
                     <Col sm={12} md={2}></Col>
                 </Row>
-                <Row xs={1} md={3} className="g-4 mt-4">
-                    {
-                        products.slice(0, 6).map(product => <Product key={product._id} product={product}></Product>)
-                    }
-                </Row>
+                {
+                    isLoading ? <div className="text-center">
+                        <Spinner variant="success" animation="border"></Spinner>
+                    </div> : <Row xs={1} md={3} className="g-4 mt-4">
+                        {
+                            products.slice(0, 6).map(product => <Product key={product._id} product={product}></Product>)
+                        }
+                    </Row>
+                }
             </Container>
         </>
     );
