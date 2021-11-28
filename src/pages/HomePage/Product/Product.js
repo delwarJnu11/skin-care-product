@@ -6,7 +6,7 @@ import { BsCart4 } from 'react-icons/bs';
 import Zoom from 'react-reveal/Zoom';
 
 const Product = ({ product }) => {
-    const { title, image, description, price, _id } = product;
+    const { title, image, description, _id } = product;
     return (
         <Col>
             <Zoom>
@@ -17,7 +17,7 @@ const Product = ({ product }) => {
                     <Card.Body>
                         <Card.Title className="product-title">{title}</Card.Title>
                         <Card.Text className="product-desc">{description.slice(0, 140)}</Card.Text>
-                        <h5 className="product-price">Price: ${price}</h5>
+                        <h5 className="product-price">Price: ${product?.size1?.price}</h5>
                     </Card.Body>
                     <Card.Footer className="card-footer">
 

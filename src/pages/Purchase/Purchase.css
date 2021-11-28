@@ -9,3 +9,39 @@
     font-family:  Roboto;
     color: rgb(53, 52, 52);
 }
+.quantity-input{
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-left: 1px solid #ec8d4d;
+    border-right: 1px solid #ec8d4d;
+}
+.quantity-wrapper{
+    width: 130px;
+    border: 1px solid #ec8d4d;
+    border-radius: 5px;
+}
+.size-button{
+    background-color: bisque;
+    border: 1px solid #ec8d4d;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 5px;
+}
+.quantity-button{
+    background-color: bisque;
+    font-size: 13px;
+}
+.quantity-button:focus, .size-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.input-field{
+    border-color: #ec8d4d;
+}
+.input-field:focus{
+    border-color: darksalmon;
+    box-shadow: 1px 2px 5px #f89a5c;
+}

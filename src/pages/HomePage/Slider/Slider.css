@@ -1,0 +1,66 @@
+.banner1{
+    background-image: url('../../../images/banner-1.jpg'),
+    linear-gradient(rgba(105, 103, 103, 0.75), rgba(99, 89, 89, 0.75));
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-blend-mode: overlay;
+
+}
+.banner2{
+    background-image: url('../../../images/banner-2.jpg'),
+    linear-gradient(rgba(105, 103, 103, 0.75), rgba(99, 89, 89, 0.75));
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-blend-mode: overlay;
+
+}
+.banner3{
+    background-image: url('../../../images/banner-3.jpg'),
+    linear-gradient(rgba(105, 103, 103, 0.75), rgba(99, 89, 89, 0.75));
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-blend-mode: overlay;
+
+}
+.banner-text{
+  position: absolute;
+  top:30%;
+}
+.banner-text h5{
+  font-size: 5rem;
+  color: #ffffff;
+  font-family: roboto;
+  letter-spacing: 1px;
+}
+.banner-text p{
+  font-size: 1em;
+  color: #e7e7e7;
+  font-family: roboto;
+}
+.sliderButton{
+  border: 1px solid rgb(226, 138, 66);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #d0936a;
+  font-size: 18px;
+  font-family: roboto;
+  color: white;
+  transition: all 0.5s;
+}
+.sliderButton:hover{
+    background-color: #975e38;
+    border: none;
+}

@@ -31,7 +31,7 @@ const AddProduct = () => {
                         </Row>
                         <Row>
                             <Col>
-                                <input placeholder="Description" className="w-100 form-control mb-3" {...register("description", { required: true })} />
+                                <input as textarea placeholder="Description" className="w-100 form-control mb-3" {...register("description", { required: true })} />
                             </Col>
                         </Row>
                         <Row>

@@ -17,7 +17,6 @@ const MyOders = () => {
                 setOrders(filterByUser)
             });
     }, [orders, user.email]);
-
     //handle delete product
     const handleDelete = id => {
         swal({
@@ -60,6 +59,7 @@ const MyOders = () => {
                                 <th>Order Id</th>
                                 <th>Product Name</th>
                                 <th>Customer Name</th>
+                                <th>Quantity</th>
                                 <th>Price</th>
                                 <th>status</th>
                                 <th>Action</th>
@@ -71,7 +71,8 @@ const MyOders = () => {
                                     <td>{order._id}</td>
                                     <td>{order.product.title}</td>
                                     <td>{order.name}</td>
-                                    <td>{order.product.price}</td>
+                                    <td>{order.quantity}</td>
+                                    <td>{order.total}</td>
                                     <td>{order.status}</td>
                                     <td>
                                         <Button title="Delete" variant="danger" onClick={() => handleDelete(order._id)}>

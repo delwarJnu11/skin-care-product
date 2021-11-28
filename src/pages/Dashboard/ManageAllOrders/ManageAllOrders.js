@@ -74,12 +74,13 @@ const ManageAllOrders = () => {
             <Row>
 
                 <Col xs={12} sm={12} md={12}>
-                    <Table striped bordered hover responsive="sm">
+                    <Table striped bordered hover responsive>
                         <thead>
                             <tr>
                                 <th>Order Id</th>
                                 <th>Product Name</th>
                                 <th>Customer Name</th>
+                                <th>Quantity</th>
                                 <th>Price</th>
                                 <th>status</th>
                                 <th>Action</th>
@@ -91,7 +92,8 @@ const ManageAllOrders = () => {
                                     <td>{order._id}</td>
                                     <td>{order.product.title}</td>
                                     <td>{order.name}</td>
-                                    <td>{order.product.price}</td>
+                                    <td>{order.quantity}</td>
+                                    <td>{order.total}</td>
                                     <td>{order.status}</td>
                                     <td>
                                         <Button title="confirm to shipping" className="me-1" variant="success" onClick={() => handleUpdate(order._id)}>
