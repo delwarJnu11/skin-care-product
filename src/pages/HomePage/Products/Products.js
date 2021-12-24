@@ -3,11 +3,9 @@ import useProducts from '../../hooks/useProducts';
 import Product from '../Product/Product';
 import './Products.css';
 import Fade from 'react-reveal/Fade';
-import useAuth from '../../hooks/useAuth';
 
 const Products = () => {
     const { products } = useProducts();
-    const { isLoading } = useAuth();
     return (
         <>
             <Container className="my-5">
@@ -26,7 +24,7 @@ const Products = () => {
                     <Col sm={12} md={2}></Col>
                 </Row>
                 {
-                    isLoading ? <div className="text-center">
+                    !products.length ? <div className="text-center">
                         <Spinner variant="success" animation="border"></Spinner>
                     </div> : <Row xs={1} md={3} className="g-4 mt-4">
                         {
