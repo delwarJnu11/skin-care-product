@@ -1,29 +1,29 @@
 import React from 'react';
-import { Spinner } from 'react-bootstrap';
-import useAuth from '../../hooks/useAuth';
+import useProducts from '../../hooks/useProducts';
 import Footer from '../../Shared/Footer/Footer';
 import Navigation from '../../Shared/Navigation/Navigation';
 import DiscountBanner from '../DiscountBanner/DiscountBanner';
 import Products from '../Products/Products';
 import Reviews from '../Reviews/Reviews';
 import Slider from '../Slider/Slider';
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 const Home = () => {
-    const { isLoading } = useAuth();
-    //spinner
-    if (isLoading) {
-        return <div className="text-center">
-            <Spinner variant="success" animation="border"></Spinner>
-        </div>
-    }
+    const { products } = useProducts();
     return (
         <div>
-            <Navigation></Navigation>
-            <Slider></Slider>
-            <Products></Products>
-            <DiscountBanner></DiscountBanner>
-            <Reviews></Reviews>
-            <Footer></Footer>
+            {
+                products.length > 0 ? <>
+                    <Navigation></Navigation>
+                    <Slider></Slider>
+                    <Products></Products>
+                    <DiscountBanner></DiscountBanner>
+                    <Reviews></Reviews>
+                    <Footer></Footer>
+                </> : <div className="text-center">
+                    <ScaleLoader size={150} color={"#b57600"} speedMultiplier={1.5} />
+                </div>
+            }
         </div>
     );
 };

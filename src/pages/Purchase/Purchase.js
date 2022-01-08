@@ -7,6 +7,8 @@ import Navigation from '../Shared/Navigation/Navigation';
 import swal from 'sweetalert';
 import Footer from '../Shared/Footer/Footer';
 import { FaMinus, FaPlus } from 'react-icons/fa';
+import InnerImageZoom from 'react-inner-image-zoom';
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
 import './Purchase.css';
 
 const Purchase = () => {
@@ -65,7 +67,13 @@ const Purchase = () => {
                 <Row className="d-flex justify-content-center align-items-center">
                     <Col md={6}>
                         <div>
-                            <img variant="top" className="img-fluid" height="600" src={product?.image} alt="" />
+                            <InnerImageZoom
+                                src={product?.image}
+                                zoomSrc={product?.image}
+                                zoomType="hover"
+                                zoomPreload={true}
+                                className="img-fluid"
+                            />
                         </div>
                     </Col>
 
