@@ -8,7 +8,7 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 
 const ManageProducts = () => {
     const { products, setProducts } = useProducts();
-
+    console.log(products)
     //handle delete product
     const handleDelete = id => {
         swal({
@@ -68,7 +68,7 @@ const ManageProducts = () => {
                                                 <td>{product._id}</td>
                                                 <td> <img width="50px" height="50px" src={product.image} alt="" /> </td>
                                                 <td>{product?.title}</td>
-                                                <td>${product?.price}</td>
+                                                <td>${product?.size1?.price}</td>
                                                 <td>
                                                     <Button title="Delete" variant="danger" onClick={() => handleDelete(product._id)}>
                                                         <FontAwesomeIcon icon={faTrashAlt} />

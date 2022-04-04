@@ -1,7 +1,7 @@
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row, Table } from 'react-bootstrap';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import swal from 'sweetalert';
 import useAuth from '../../hooks/useAuth';
 
@@ -12,11 +12,10 @@ const MyOders = () => {
         fetch('https://aqueous-headland-20812.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
-
                 const filterByUser = data.filter(order => order.email === user.email);
                 setOrders(filterByUser)
             });
-    }, [orders, user.email]);
+    }, [user.email, orders]);
     //handle delete product
     const handleDelete = id => {
         swal({
