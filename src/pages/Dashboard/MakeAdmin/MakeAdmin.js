@@ -1,58 +1,58 @@
-import React, { useState } from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
-import swal from 'sweetalert';
+import React, { useState } from "react";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import swal from "sweetalert";
 
 const MakeAdmin = () => {
-    const [email, setEmail] = useState('');
-    //get Input value
-    const handleOnBlur = e => {
-        const value = e.target.value;
-        setEmail(value);
-    }
-    //handle admin submit
-    const handleAdminSubmit = e => {
-        const user = { email };
-        fetch('https://aqueous-headland-20812.herokuapp.com/users/admin', {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.modifiedCount) {
-                    swal("Good job!", "Admin Made Successfully Done!", "success");
-                }
-            })
+  const [email, setEmail] = useState("");
+  //get Input value
+  const handleOnBlur = (e) => {
+    const value = e.target.value;
+    setEmail(value);
+  };
+  //handle admin submit
+  const handleAdminSubmit = (e) => {
+    const user = { email };
+    fetch("https://skin-care-server.vercel.app/users/admin", {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount) {
+          swal("Good job!", "Admin Made Successfully Done!", "success");
+        }
+      });
 
-        e.preventDefault()
-    }
-    return (
-        <Container>
+    e.preventDefault();
+  };
+  return (
+    <Container>
+      <Row>
+        <Col md={4}></Col>
+        <Col md={4}>
+          <h1 className="dashboard-title">Make a User Admin</h1>
+          <form onSubmit={handleAdminSubmit}>
             <Row>
-                <Col md={4}></Col>
-                <Col md={4}>
-                    <h1 className="dashboard-title">Make a User Admin</h1>
-                    <form onSubmit={handleAdminSubmit}>
-                        <Row>
-                            <Col>
-                                <input
-                                    onBlur={handleOnBlur}
-                                    placeholder="Email"
-                                    className="w-100 form-control mb-3"
-                                />
-                            </Col>
-                        </Row>
-                        <Button className="dashboard-button" type="submit">
-                            Make an Admin
-                        </Button>
-                    </form>
-                </Col>
-                <Col md={4}></Col>
+              <Col>
+                <input
+                  onBlur={handleOnBlur}
+                  placeholder="Email"
+                  className="w-100 form-control mb-3"
+                />
+              </Col>
             </Row>
-        </Container>
-    );
+            <Button className="dashboard-button" type="submit">
+              Make an Admin
+            </Button>
+          </form>
+        </Col>
+        <Col md={4}></Col>
+      </Row>
+    </Container>
+  );
 };
 
 export default MakeAdmin;
